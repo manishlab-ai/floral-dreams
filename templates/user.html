@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome, {{ customer.name }}!</h1>
+    <p class="lead">Email: {{ customer.emailaddress }} | Contact: {{ customer.contactno }}</p>
+    <hr class="my-4">
+    <p>Browse our exclusive range of products below.</p>
+</div>
+
+<div class="row">
+    {% for p in pro %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <img class="card-img-top" src="{{p.image.url}}" alt="{{p.name}}" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">{{p.name}}</h5>
+                <p class="card-text">{{p.desc}}</p>
+                <p class="card-text"><strong>Price: ₹{{p.price}}</strong></p>
+            </div>
+            <div class="card-footer text-center">
+                <form action="/update_cart/" method="POST" class="d-inline">
+                    {% csrf_token %}
+                    <input type="hidden" name="pid" value="{{p.id}}">
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="btn btn-warning btn-sm">Add to Cart</button>
+                </form>
+                <a href="/buynow/?pid={{p.id}}" class="btn btn-success btn-sm">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
