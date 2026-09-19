@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>My Order History</h2>
+<table class="table table-striped mt-3">
+    <thead class="thead-dark">
+        <tr>
+            <th>Order Date</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.order_date }}</td>
+            <td>{{ order.product.name }}</td>
+            <td>₹{{ order.price }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.address }}, {{ order.pincode }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">No orders found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
