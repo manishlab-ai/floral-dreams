@@ -3,7 +3,7 @@ from flask import Flask, render_template, session
 import os
 
 app = Flask(__name__, template_folder='templates')
-app.secret_key = 'super-secret-key'
+app.secret_key = 'super-secret-key-for-floral-dreams'
 
 # E-commerce UI के लिए सैंपल डेटा
 cats = [
@@ -16,12 +16,15 @@ pro = [
     {'id': 2, 'name': 'Orchid Arrangement', 'desc': 'Exotic purple orchids in a stylish glass vase.', 'price': '899'}
 ]
 
+class DummySession(dict):
+    def __getattr__(self, item):
+        return self.get(item, None)
+
 @app.before_request
 def make_session_compat():
-    # Flask request Object में dummy session अटैच करना ताकि navbar.html क्रैश न हो
     from flask import request
-    if not hasattr(request, 'session'):
-        request.session = session
+    dummy = DummySession({'email': None, 'user': None})
+    object.__setattr__(request, 'session', dummy)
 
 @app.route('/')
 def index():
