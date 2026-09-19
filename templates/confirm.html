@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h3>Confirm Order Details</h3>
+            </div>
+            <div class="card-body">
+                <h4>Product: {{ product.name }}</h4>
+                <p>Price: ₹{{ product.price }}</p>
+                <hr>
+                <form action="/checkout/" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" name="pid" value="{{ product.id }}">
+                    <div class="form-group">
+                        <label>Delivery Address</label>
+                        <textarea name="address" class="form-control" required>{{ customer.address }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Pincode</label>
+                        <input type="number" name="pincode" value="{{ customer.pincode }}" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" name="quantity" value="1" min="1" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
