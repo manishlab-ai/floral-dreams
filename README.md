@@ -1,112 +1,155 @@
- 
-# 🎓 Official College Management Portal ➔ Wait, Where is the Makeup & Skincare Store?! 🌸💄
+```md
+# Floral Dreams
 
-> **🔥 Live Demo Link (24 घंटे की खून-पसीना मेहनत का नतीजा):** [Click Here to View the App](https://collage-management-portal.onrender.com)  
-> **📋 Report Title:** *College Website / Student Portal* (As per Vartax Training Report, Page 1)  
-> **🛍️ Reality:** *Floral Dreams - Ultimate E-Commerce & Skincare Store*  
-> **👨‍💻 Fixed & Deployed By:** Manish (Government Polytechnic Rampur) — *जिन्होंने इंस्टीट्यूट द्वारा दी गई सिर्फ अधूरी कोड फाइलों (बिना रनर, बिना सही मॉड्यूल्स और बिना काम करने वाली सेटिंग्स) को अकेले 24 घंटे लगातार जागकर ठीक किया और इस प्रोजेक्ट को क्लाउड पर लाइव किया है!*
+A Django-based e-commerce web application for browsing and managing flower, gift, and lifestyle products.
 
----
+## Features
 
-## 🧐 कड़वी सच्चाई और महा-घोटाला (The Reality Check)
+- Product browsing by category
+- Product detail pages
+- Customer registration and login
+- Shopping cart management
+- Checkout and order history
+- Django admin panel
+- Product image uploads
+- Render deployment with Gunicorn
 
-जब समर ट्रेनिंग के नाम पर इंस्टीट्यूट से प्रोजेक्ट रिपोर्ट और कोड मिला, तो उन्होंने कोई लाइव लिंक नहीं दिया था—बस कुछ अधूरी कोड फाइलें और पीडीएफ थमा दी थीं जो लोकल में भी रन नहीं होतीं। न कोई पूरा रनर था, न सही मॉड्यूल्स और न ही काम करने वाली सेटिंग्स! 
+## Screenshots
 
-अकेले 24 घंटे सिर खपाने, कोडिंग की कमियों को दूर करने और इस **लाइव लिंक (`https://collage-management-portal.onrender.com`)** पर डिप्लॉय करने के बाद जो असलियत सामने आई, वह यह है:
-* **होमपेज पर क्या मिला?** कॉलेज का नोटिस बोर्ड नहीं, बल्कि फूलों, लिपस्टिक और ब्यूटी प्रोडक्ट्स की ऑनलाइन दुकान!
-* **फीस जमा करने की जगह क्या है?** सीधा **'My Cart'** और **'My Orders'** का शॉपिंग चेकआउट!
-* **छात्रों (Students) का क्या हुआ?** कोड के अंदर से छात्रों को गायब करके सबको सीधे **'Customer'** बना दिया गया है!
+![Floral Dreams storefront](images/screenshot1.jpg)
 
-> *मतलब साफ है भाई—इन्होंने तो रन करने लायक पूरी चीज दी ही नहीं थी, अपनी 24 घंटे की मेहनत के बाद पता चला कि कॉलेज पोर्टल के नाम पर हमें सीधे मेकअप और ब्यूटी प्रोडक्ट्स का ई-कॉमर्स पोर्टल थमाया गया है!* 😂🛒
+![Floral Dreams application](images/screenshot2.jpg)
 
----
+## Tech Stack
 
-## 📸 Project Screenshots (देख लीजिए सबूत)
+- Python
+- Django
+- SQLite for local development
+- PostgreSQL for production
+- Gunicorn
+- WhiteNoise
+- Pillow
+- Bootstrap
 
-**1. Logged-in Menu View (कस्टमर और कार्ट का जिन्न):**  
-![App Screenshot 1](images/screenshot1.jpg)
+## Project Structure
 
-**2. Guest / Public Menu View (लॉगिन और रजिस्टर विकल्प):**  
-![App Screenshot 2](images/screenshot2.jpg)
-
----
-
-## 🎭 Expectation vs. Reality Table
-
-| रिपोर्ट के कागज पर क्या लिखा है? (As per PDF) | इस लाइव प्रोजेक्ट के अंदर असलियत क्या है? |
-| :--- | :--- |
-| **प्रोजेक्ट का नाम:** कॉलेज वेबसाइट / स्टूडेंट पोर्टल | **असली प्रोजेक्ट:** *Floral Dreams E-Commerce Store* |
-| **टेक्नोलॉजी:** PHP, MySQL (पेज 17) | **असली टेक्नोलॉजी:** Python (Django) और शॉपिंग कार्ट डेटाबेस |
-| **डेटाबेस:** Student Info, Timetable, Department | **असली डेटाबेस:** `Customer`, `Product`, `Orders`, `ShoppingCart` |
-
----
-
-## 💀 Copy-Paste Hall of Fame (नाम बदलना भूल गए!)
-
-इस प्रोजेक्ट की महानता का सबूत इसके 70 पन्नों के डॉक्यूमेंट में साफ चमक रहा है, जहाँ कॉपी-पेस्ट करते वक्त वे ये नाम बदलना ही भूल गए:
-* `STUDENT_NAME_HERE`
-* `college_name_here`  
-> *यानी एक ही जेरॉक्स कॉपी पूरी बटालियन के सिर मढ़ दी गई है! कम से कम नाम तो बदल लेते भाई!* 📄💀
-
----
-
-## 💻 Technical Section & 24-Hours Struggle (तकनीकी कोड की पोल)
-
-बिना किसी सही रनर, अधूरी फाइलों और गायब मॉड्यूल्स वाले इस प्रोजेक्ट को अकेले 24 घंटे लगातार मेहनत करके ठीक करने के बाद जो डेटा स्ट्रक्चर सामने आया, उसका सच यह है:
-
-```python
-# Django Models Reality (जहाँ स्टूडेंट की जगह सीधे कस्टमर और ब्यूटी प्रोडक्ट्स हैं)
-class Customer(models.Model):  
-    name = models.CharField(max_length=50)
-    emailaddress = models.EmailField(max_length=50, primary_key=True)
-
-class Product(models.Model):   
-    name = models.CharField(max_length=50)
-    price = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='newproducts/')
-
+```text
+floral-dreams/
+├── manage.py
+├── requirements.txt
+├── images/
+├── templates/
+├── floral_dreams_app/
+└── floral_dreams_project/
 ```
----
 
-## 🚀 How to Run Locally (अगर अपनी आँखों से चलाना चाहो)
+## Run Locally
 
-### 1. Clone the repository:
+Clone the repository:
+
 ```bash
-git clone https://github.com/manishlab-ai/floral-dreams
+git clone https://github.com/manishlab-ai/floral-dreams.git
 cd floral-dreams
 ```
 
-### 2. Install dependencies:
+Create and activate a virtual environment:
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### macOS/Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run migrations & server:
+Apply migrations:
+
 ```bash
+python manage.py makemigrations floral_dreams_app
 python manage.py migrate
+```
+
+Create an admin user:
+
+```bash
+python manage.py createsuperuser
+```
+
+Start the development server:
+
+```bash
 python manage.py runserver
 ```
 
-### 4. Open in browser:
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/) *(और देखिए कि कॉलेज के नाम पर ब्यूटी प्रोडक्ट्स कैसे बिक रहे हैं!)*
+Open the application:
 
----
-
-## ☁️ Deployment on Render (24 Hours Hardwork & Fixing)
-
-इन्होंने कोई लाइव लिंक नहीं दिया था; इस प्रोजेक्ट की अधूरी फाइलों, खराब सेटिंग्स और गायब मॉड्यूल्स को ठीक करके इसे Render पर लाइव करने में पूरे 24 घंटे की लगातार खून-पसीना मेहनत लगी है:
-
-* **Build Command:**
-```bash
-pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
+```text
+http://127.0.0.1:8000/
 ```
 
-* **Start Command:**
-```bash
-gunicorn floral_dreams_project.wsgi:application --bind 0.0.0.0:\$PORT
+## Admin Panel
+
+```text
+http://127.0.0.1:8000/admin/
 ```
 
-> “यह रिपॉजिटरी तब तक लाइव रहेगी और सिस्टम की पोल खोलती रहेगी, जब तक हमारी 24 घंटे की मेहनत और इस फर्जीवाड़े का हिसाब नहीं मिल जाता।” 🤡🔥 
+Add categories and products through the admin panel to display products on the homepage.
+
+## Render Deployment
+
+### Build Command
+
+```bash
+pip install -r requirements.txt && python manage.py makemigrations floral_dreams_app && python manage.py migrate && python manage.py collectstatic --noinput
+```
+
+### Start Command
+
+```bash
+gunicorn floral_dreams_project.wsgi:application --bind 0.0.0.0:$PORT
+```
+
+### Environment Variables
+
+```text
+PYTHON_VERSION=3.11.9
+DJANGO_SECRET_KEY=your-secure-secret-key
+DEBUG=False
+```
+
+## Important Notes
+
+- Products must be added through the admin panel before they appear on the homepage.
+- SQLite is suitable for local testing.
+- PostgreSQL is recommended for production.
+- Uploaded media files should use persistent storage in production.
+
+## Repository
+
+[View the source code on GitHub](https://github.com/manishlab-ai/floral-dreams)
+
+## License
+
+This project is intended for educational and portfolio purposes.
+```
 
 
+```md
+## Live Demo
+
+[Open Floral Dreams]):
+** [Click Here to View the App](https://collage-management-portal.onrender.com)  
+```
 
