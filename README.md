@@ -65,34 +65,43 @@ class Product(models.Model):
     price = models.IntegerField(default=0)
     image = models.ImageField(upload_to='newproducts/')
 
-🚀 How to Run Locally (अगर अपनी आँखों से चलाना चाहो)
- * Clone the repository:
-   git clone https://github.com/manishlab-ai/floral-dreams
+## 🚀 How to Run Locally (अगर अपनी आँखों से चलाना चाहो)
 
+### 1. Clone the repository:
+```bash
+git clone https://github.com/manishlab-ai/floral-dreams
+cd floral-dreams
+```
 
- * Install dependencies:
-   pip install -r requirements.txt
+### 2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-
- * Run migrations & server:
-   python manage.py migrate
+### 3. Run migrations & server:
+```bash
+python manage.py migrate
 python manage.py runserver
+```
 
+### 4. Open in browser:
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/) *(और देखिए कि कॉलेज के नाम पर ब्यूटी प्रोडक्ट्स कैसे बिक रहे हैं!)*
 
- * Open in browser: http://127.0.0.1:8000/ (और देखिए कि कॉलेज के नाम पर ब्यूटी प्रोडक्ट्स कैसे बिक रहे हैं!)
+---
 
-
-# ☁️ Deployment on Render (24 Hours Hardwork & Fixing)
+## ☁️ Deployment on Render (24 Hours Hardwork & Fixing)
 
 इन्होंने कोई लाइव लिंक नहीं दिया था; इस प्रोजेक्ट की अधूरी फाइलों, खराब सेटिंग्स और गायब मॉड्यूल्स को ठीक करके इसे Render पर लाइव करने में पूरे 24 घंटे की लगातार खून-पसीना मेहनत लगी है:
 
+* **Build Command:**
+```bash
+pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
+```
 
- * Build Command: pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput
-
-
-
- * Start Command: gunicorn floral_dreams_project.wsgi:application --bind 0.0.0.0:$PORT
-
+* **Start Command:**
+```bash
+gunicorn floral_dreams_project.wsgi:application --bind 0.0.0.0:\$PORT
+```
 
 > “यह रिपॉजिटरी तब तक लाइव रहेगी और सिस्टम की पोल खोलती रहेगी, जब तक हमारी 24 घंटे की मेहनत और इस फर्जीवाड़े का हिसाब नहीं मिल जाता।” 🤡🔥 >
 
