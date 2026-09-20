@@ -144,9 +144,9 @@ DEBUG=False
 
 This project is intended for educational and portfolio purposes.
 ```
-
+```
 ## Live Demo
 
-[Open Floral Dream]
-**[Click Here to View the App](https://collage-management-portal.onrender.com)**
+[Open Floral Dreams](https://collage-management-portal.onrender.com)
+
 
