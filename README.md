@@ -65,6 +65,9 @@ class Product(models.Model):
     price = models.IntegerField(default=0)
     image = models.ImageField(upload_to='newproducts/')
 
+```
+---
+
 ## 🚀 How to Run Locally (अगर अपनी आँखों से चलाना चाहो)
 
 ### 1. Clone the repository:
@@ -103,7 +106,7 @@ pip install -r requirements.txt && python manage.py migrate && python manage.py 
 gunicorn floral_dreams_project.wsgi:application --bind 0.0.0.0:\$PORT
 ```
 
-> “यह रिपॉजिटरी तब तक लाइव रहेगी और सिस्टम की पोल खोलती रहेगी, जब तक हमारी 24 घंटे की मेहनत और इस फर्जीवाड़े का हिसाब नहीं मिल जाता।” 🤡🔥 >
+> “यह रिपॉजिटरी तब तक लाइव रहेगी और सिस्टम की पोल खोलती रहेगी, जब तक हमारी 24 घंटे की मेहनत और इस फर्जीवाड़े का हिसाब नहीं मिल जाता।” 🤡🔥 
 
 
 
