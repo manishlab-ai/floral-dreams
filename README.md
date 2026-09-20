@@ -143,8 +143,8 @@ DEBUG=False
 ## License
 
 This project is intended for educational and portfolio purposes.
-```
-```
+
+
 ## Live Demo
 
 [Open Floral Dreams](https://collage-management-portal.onrender.com)
