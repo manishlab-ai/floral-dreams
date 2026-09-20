@@ -1,5 +1,5 @@
-```md
-# Floral Dreams
+
+## Floral Dreams
 
 A Django-based e-commerce web application for browsing and managing flower, gift, and lifestyle products.
 
@@ -145,8 +145,7 @@ DEBUG=False
 This project is intended for educational and portfolio purposes.
 ```
 
-
-```md
+--
 ## Live Demo
 
 [Open Floral Dreams]):
